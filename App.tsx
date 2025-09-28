@@ -7,8 +7,7 @@ import { StatusIndicator } from './components/StatusIndicator';
 import type { Status, Transcript } from './types';
 import { createBlob, decodeAudioData, encode } from './utils/audio';
 
-// IMPORTANT: Do not hardcode the API key. It is read from environment variables.
-const API_KEY = process.env.API_KEY;
+const API_KEY = 'AIzaSyBA_e9bIQ-OLuvEXMNAQxtZ31NB8LRiLFI';
 
 const App: React.FC = () => {
   const [status, setStatus] = useState<Status>('idle');
@@ -70,7 +69,7 @@ const App: React.FC = () => {
 
   const handleStartSession = useCallback(async () => {
     if (!API_KEY) {
-      setError('API_KEY environment variable not set.');
+      setError('API_KEY is not set.');
       setStatus('error');
       return;
     }
