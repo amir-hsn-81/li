@@ -193,10 +193,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="bg-black text-white w-full h-screen flex flex-col items-center justify-between p-4 overflow-hidden">
+    <div className="bg-black text-white w-full h-screen flex flex-col items-center justify-between p-2 sm:p-4 overflow-hidden">
         <div className="w-full max-w-3xl flex flex-col items-center flex-grow min-h-0">
-            <header className="text-center p-4">
-                <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
+            <header className="text-center p-2 sm:p-4">
+                <h1 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
                     Liana
                 </h1>
             </header>
@@ -207,7 +207,7 @@ const App: React.FC = () => {
               currentOutput={currentOutput}
             />
 
-            <footer className="w-full flex flex-col items-center justify-center p-4 space-y-4">
+            <footer className="w-full flex flex-col items-center justify-center p-2 sm:p-4 space-y-4">
                 <StatusIndicator status={status} error={error} />
                 <MicButton status={status} onClick={toggleSession} />
             </footer>

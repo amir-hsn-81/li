@@ -21,7 +21,7 @@ const Message: React.FC<{ transcript: Transcript }> = ({ transcript }) => {
     return (
         <div className={`w-full flex flex-col ${isLiana ? 'items-start' : 'items-end'} mb-4`}>
              <p className={`text-sm font-semibold mb-1 ${labelClasses}`}>{speakerLabel}</p>
-            <div className={`max-w-xl p-3 rounded-lg ${bubbleClasses}`}>
+            <div className={`max-w-[85%] md:max-w-xl p-3 rounded-lg ${bubbleClasses}`}>
                 <p className="text-white whitespace-pre-wrap">{transcript.text}</p>
             </div>
         </div>
@@ -44,7 +44,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({ transcripts, cur
             {currentInput && (
                 <div className="w-full flex flex-col items-end mb-4 opacity-70">
                     <p className="text-sm font-semibold mb-1 text-gray-400">You</p>
-                    <div className="max-w-xl p-3 rounded-lg bg-gray-800 self-end">
+                    <div className="max-w-[85%] md:max-w-xl p-3 rounded-lg bg-gray-800 self-end">
                         <p className="text-white whitespace-pre-wrap">{currentInput}<BlinkingCursor/></p>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ export const TranscriptView: React.FC<TranscriptViewProps> = ({ transcripts, cur
             {currentOutput && (
                 <div className="w-full flex flex-col items-start mb-4 opacity-70">
                     <p className="text-sm font-semibold mb-1 text-blue-400">Liana</p>
-                    <div className="max-w-xl p-3 rounded-lg bg-blue-900/50 self-start">
+                    <div className="max-w-[85%] md:max-w-xl p-3 rounded-lg bg-blue-900/50 self-start">
                         <p className="text-white whitespace-pre-wrap">{currentOutput}<BlinkingCursor/></p>
                     </div>
                 </div>

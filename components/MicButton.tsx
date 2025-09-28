@@ -20,7 +20,7 @@ export const MicButton: React.FC<MicButtonProps> = ({ status, onClick }) => {
   const isConnecting = status === 'connecting';
   const isActive = status === 'listening' || status === 'speaking';
 
-  const baseClasses = "relative w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-500/50";
+  const baseClasses = "relative w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-500/50";
   const shadowClasses = "shadow-[0_0_15px_rgba(59,130,246,0.5),0_0_30px_rgba(59,130,246,0.3)]";
   
   let dynamicClasses = '';
@@ -50,9 +50,9 @@ export const MicButton: React.FC<MicButtonProps> = ({ status, onClick }) => {
       aria-label={isActive ? "Stop session" : "Start session"}
     >
         {isConnecting ? (
-            <div className="w-8 h-8 border-4 border-t-transparent border-white rounded-full animate-spin"></div>
+            <div className="w-6 h-6 sm:w-8 sm:h-8 border-4 border-t-transparent border-white rounded-full animate-spin"></div>
         ) : (
-            <MicrophoneIcon className="w-10 h-10 text-white" />
+            <MicrophoneIcon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
         )}
         {status === 'speaking' && (
             <div className="absolute top-0 left-0 w-full h-full rounded-full border-2 border-cyan-300 animate-ping opacity-75"></div>
