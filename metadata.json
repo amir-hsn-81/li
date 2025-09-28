@@ -1,0 +1,7 @@
+{
+  "name": "Liana Voice Assistant",
+  "description": "A voice assistant named Liana, inspired by Alexa's design. It can converse in both English and Persian (Farsi) using the Gemini API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
